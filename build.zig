@@ -39,6 +39,7 @@ pub fn build(b: *std.Build) !void {
         "-DLIBXML_STATIC=1",
         "-DLIBXML_AUTOMATA_ENABLED=1",
         "-DWITHOUT_TRIO=1",
+        "-DLIBXML_PUSH_ENABLED=1"
     });
     if (target.result.os.tag != .windows) {
         try flags.appendSlice(&.{
